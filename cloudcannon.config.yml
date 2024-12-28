@@ -1,7 +1,18 @@
-collections_config: {}
+collections_config:
+  data:
+    path: src/_data
+    output: false
+    icon: settings
+    disable_add: true
+    disable_remove: true
+    items:
+      - name: footer
+        path: footer.json
+        parser: json
 paths:
   static: public
   uploads: public/uploads
+  images: public/images
 timezone: Africa/Cairo
 markdown:
   engine: commonmark
