@@ -1,5 +1,7 @@
 {
-  "logo": "/images/footer-logo.svg",
+  "logo": {
+    "src": "images/footer-logo.svg"
+  },
   "copyright": "Copyright © 2024 Stevie Awards, Inc. All Rights Reserved. American Business Awards and International Business Awards are registered trademarks of Stevie Awards, Inc.",
   "links": [
     {

@@ -7,12 +7,6 @@ collections_config:
       - name: footer
         path: footer.json
         parser: json
-        _inputs:
-          logo:
-            type: image
-            label: Footer Logo
-            options:
-              uploads_dir: "public/images"
 
 paths:
   static: public
@@ -20,10 +14,9 @@ paths:
   images: public/images
 
 _inputs:
-  image:
-    type: image
   src:
     type: image
+    comment: Select an image
 
 timezone: Africa/Cairo
 markdown:
