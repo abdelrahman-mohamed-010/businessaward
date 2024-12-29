@@ -1,0 +1,103 @@
+---
+const { logo, copyright, link1, link2, link3, link4, link5, link6, social1, social2, social3, social4, newsletter } = Astro.props;
+---
+
+<footer class="bg-black pt-[162px] pb-9 lg:pb-16 lg:pt-20 overflow-hidden -mt-[120px] lg:mt-[1000px]">
+  <div class="container">
+    <div class="flex flex-wrap lg:flex-nowrap justify-between">
+      <div class="w-full lg:max-w-[390px] footer-logo">
+        <div class="mb-6">
+          <a href="">
+            <img class="max-w-[200px] lg:max-w-[311px] mx-auto text-center lg:text-start lg:mx-0"
+              src={logo.src} alt="footer logo">
+          </a>
+        </div>
+        <p class="copyright opacity-30 text-white lg:text-sm text-center lg:text-start text-[11px]">
+          {copyright}
+        </p>
+      </div>
+      <div class="w-full footer-right-content">
+        <ul class="footer-links flex-wrap lg:flex-nowrap justify-center lg:justify-end flex gap-y-3 gap-x-6 lg:gap-9 mb-10 lg:mb-0">
+          <li>
+            <a href={link1.href} class="text-white TuskerGrotesk5500Medium text-xs lg:text-sm leading-4 lg:leading-5">
+              {link1.text}
+            </a>
+          </li>
+          <li>
+            <a href={link2.href} class="text-white TuskerGrotesk5500Medium text-xs lg:text-sm leading-4 lg:leading-5">
+              {link2.text}
+            </a>
+          </li>
+          <li>
+            <a href={link3.href} class="text-white TuskerGrotesk5500Medium text-xs lg:text-sm leading-4 lg:leading-5">
+              {link3.text}
+            </a>
+          </li>
+          <li>
+            <a href={link4.href} class="text-white TuskerGrotesk5500Medium text-xs lg:text-sm leading-4 lg:leading-5">
+              {link4.text}
+            </a>
+          </li>
+          <li>
+            <a href={link5.href} class="text-white TuskerGrotesk5500Medium text-xs lg:text-sm leading-4 lg:leading-5">
+              {link5.text}
+            </a>
+          </li>
+          <li>
+            <a href={link6.href} class="text-white TuskerGrotesk5500Medium text-xs lg:text-sm leading-4 lg:leading-5">
+              {link6.text}
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-socail-media flex flex-wrap justify-center lg:flex-nowrap gap-[22px] lg:justify-end py-8 lg:py-14 border-b border-[#333333] mb-4 lg:mb-0 lg:border-0">
+          <li>
+            <a href={social1.href}
+              class="w-[33px] h-[33px] hover:bg-primary hover:border-primary rounded-full flex justify-center items-center bg-[#D9D9D914;] border border-[#63636380] group">
+              <Fragment set:html={social1.svg} />
+            </a>
+          </li>
+          <li>
+            <a href={social2.href}
+              class="w-[33px] h-[33px] hover:bg-primary hover:border-primary rounded-full flex justify-center items-center bg-[#D9D9D914;] border border-[#63636380] group">
+              <Fragment set:html={social2.svg} />
+            </a>
+          </li>
+          <li>
+            <a href={social3.href}
+              class="w-[33px] h-[33px] hover:bg-primary hover:border-primary rounded-full flex justify-center items-center bg-[#D9D9D914;] border border-[#63636380] group">
+              <Fragment set:html={social3.svg} />
+            </a>
+          </li>
+          <li>
+            <a href={social4.href}
+              class="w-[33px] h-[33px] hover:bg-primary hover:border-primary rounded-full flex justify-center items-center bg-[#D9D9D914;] border border-[#63636380] group">
+              <Fragment set:html={social4.svg} />
+            </a>
+          </li>
+        </ul>
+        <div class="subscribe-wrapper max-w-[524px] mx-auto lg:mx-0 lg:ml-auto">
+          <div class="mb-4 lg:mb-7">
+            <h3 class="text-white TuskerGrotesk5600Semibold text-base lg:text-2xl mb-1 lg:mb-3">
+              {newsletter.title}
+            </h3>
+            <p class="text-white text-xs lg:text-base opacity-60">
+              {newsletter.description}
+            </p>
+          </div>
+          <form action="">
+            <div class="relative">
+              <input
+                class="border box-border w-full h-[44px] lg:h-[54px] outline-0 bg-transparent text-white placeholder:text-[#ffffff60] border-[#ffffff50] TuskerGrotesk5600Semibold pr-[150px] text-sm px-5 focus:border-primary"
+                type="text"
+                placeholder={newsletter.placeholder}>
+              <button type="submit"
+                class="min-w-[130px] absolute top-0 right-0 bottom-0 text-black bg-primary text-sm TuskerGrotesk5600Semibold">
+                {newsletter.buttonText}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
