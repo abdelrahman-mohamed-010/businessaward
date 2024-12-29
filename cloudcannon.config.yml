@@ -5,17 +5,24 @@ collections_config:
     icon: settings
     disable_add: true
     disable_remove: true
-    items:
-      - name: footer
+    schemas:
+      footer:
         path: footer.json
-        parser: json
+        name: Footer Settings
         _inputs:
           logo:
             type: image
             label: Footer Logo
-            comment: Upload or select the footer logo (SVG recommended)
+            comment: Upload or select the footer logo
             options:
-              uploads_dir: "public/images"
+              uploads_dir: "/images"
+        _select_data:
+          logo:
+            values: data.image_files
+    items:
+      - name: footer
+        path: footer.json
+        parser: json
 
 paths:
   static: public
