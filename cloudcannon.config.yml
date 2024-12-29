@@ -1,6 +1,6 @@
 collections_config:
   data:
-    path: src/_data
+    path: src/data
     output: false
     icon: settings
     disable_add: true
