@@ -9,10 +9,28 @@ collections_config:
       - name: footer
         path: footer.json
         parser: json
+        _inputs:
+          logo:
+            type: image
+            label: Footer Logo
+            comment: Upload or select the footer logo (SVG recommended)
+            options:
+              uploads_dir: "public/images"
+
 paths:
   static: public
   uploads: public/uploads
   images: public/images
+
+# Add image input configuration
+_inputs:
+  image:
+    type: image
+    comment: Select or upload an image
+  src:
+    type: image
+    comment: Select or upload an image file
+
 timezone: Africa/Cairo
 markdown:
   engine: commonmark
